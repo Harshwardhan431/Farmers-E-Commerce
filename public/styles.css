@@ -1,0 +1,70 @@
+
+.outerDiv{
+   
+
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.innerDiv{
+    position: relative;
+    border-style: solid;
+    border-color: #03C04A;
+    border-width: 2px;
+    border-radius: 22px;
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+    
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.Label{
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-family: 'Lobster-Regular',cursive;
+    color: #74b74e;
+    font-weight: bold;
+}
+
+.Inputs{
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.b1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignIn {
+    background-color: #03C04A;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
