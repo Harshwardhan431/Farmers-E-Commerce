@@ -5,6 +5,7 @@ import TextFieldStyles from "./components/textarea";
 import { Button } from "@material-ui/core";
 import Buttons from "./components/Button_Primary";
 import ButtonsSecondry from "./components/Button_Secondry";
+import { Link } from "react-router-dom";
 
 function RegistrationPage(props){
  
@@ -26,7 +27,7 @@ function RegistrationPage(props){
 
                     <Buttons text="Register" name="register" onTap={() => props.onTap("register")} />
 
-                    <ButtonsSecondry text="Log In?" onClick={() => props.onTap("login")} />
+                    <Link to="/"><ButtonsSecondry text="Log In?" onClick={() => props.onTap("login")} /></Link>
 
                 </form>
             </div>
