@@ -1,38 +1,30 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import RegistrationPage from "./RegistrationPage";
 import ForgotPassword from "./forgotPassword";
+import { Children } from "react";
+import Profile from "./pages/profile_page";
+import Root from "./pages/root";
+import Dashboard from "./pages/dashboard_page";
 
+const router = createBrowserRouter([
+  {
+    path: '/', element: <Root />, children: [
+      { path: "/", element: <LoginPage />, },
+      { path: "/Register", element: <RegistrationPage /> },
+      { path: "/Forgot_pass", element: <ForgotPassword /> },
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/profile", element: <Profile /> }
 
+    ]
+  },
+])
 
-function App(){
-    const [frame,set_frame]=useState(true);
-    const [isUserRegistered, setUser]=useState(true); 
-    
-    function frame_display(){
-        return frame? <RegistrationPage /> : <ForgotPassword />
-    }
-
-    
-
-    const frame_set = name => {
-        console.log(name);
-        if (name === "register") {
-          set_frame(true);
-          setUser(false);
-        } else if (name === "forgot") {
-          set_frame(false);
-          setUser(false);
-        }
-
-      };
-
-        
-
-
-    
-    return(
-        isUserRegistered ? <LoginPage onTap={frame_set} /> : frame_display()
-    );
+function App() {
+  //const [isUserRegistered, setUser] = useState(true);
+  return (
+    <RouterProvider router={router} />
+  );
 }
 export default App;
