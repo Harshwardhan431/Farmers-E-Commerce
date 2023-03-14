@@ -68,3 +68,33 @@ form{
     border-radius: 5px;
   }
   
+  nav{
+    background-color: #03C04A;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    color: whitesmoke;
+  }
+
+#navbar ul{
+
+    margin-right: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar ul li{
+    list-style: none;
+    padding: 0 25px;
+    position: relative;
+}
+#navbar ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#navbar ul li a:hover{
+    color: #3c721a;
+}
