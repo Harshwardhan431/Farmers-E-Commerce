@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
+import SideBar from "../components/sidebar";
+import NavBar from "../components/navbar";
 function Dashboard(){
-    function open(){
-        return
-    }
     return (<>
-    <h1>This Is dasboard page</h1>
+    <NavBar/>
     <Link to="/profile">Complete Profile</Link>
     </>);
 }

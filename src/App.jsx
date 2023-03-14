@@ -6,7 +6,7 @@ import ForgotPassword from "./forgotPassword";
 import { Children } from "react";
 import Profile from "./pages/profile_page";
 import Root from "./pages/root";
-import Dashboard from "./pages/dashboard_page";
+import Dashboard from "./pages/dasboard_page";
 
 const router = createBrowserRouter([
   {
