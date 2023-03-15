@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-farmersecommerce-dev-183927-authRole",
+      "UnauthRoleArn": "arn:aws:iam::027786700839:role/amplify-farmersecommerce-dev-183927-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::027786700839:role/amplify-farmersecommerce-dev-183927-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-farmersecommerce-dev-183927-deployment",
+      "UnauthRoleName": "amplify-farmersecommerce-dev-183927-unauthRole",
+      "StackName": "amplify-farmersecommerce-dev-183927",
+      "StackId": "arn:aws:cloudformation:ap-south-1:027786700839:stack/amplify-farmersecommerce-dev-183927/9e450d20-c332-11ed-8209-0a1b669c7636",
+      "AmplifyAppId": "d1nh9bbii9z6g9"
+    }
+  }
+}
