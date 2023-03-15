@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "farmersecommerce",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\git desktop\\Farmers-E-Commerce\\amplify\\backend\\api\\farmersecommerce\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
