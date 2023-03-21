@@ -1,39 +1,72 @@
-import React,{useState} from "react";
-import ButtonStyles from "./components/material_styles/Button_Styles_Primary";
+import React,{useState , useEffect} from "react";
 import Buttons from "./components/Button_Primary";
-import TextField from '@material-ui/core/TextField';
-import TextFieldStyles from "./components/textarea";
+import TextArea from "./components/Text_Area";
 import { Button } from "@material-ui/core";
-import {Link, Outlet} from "react-router-dom";
-
+import {Link, useNavigate} from "react-router-dom";
+import { listUsers } from "./graphql/queries";
+import  {Amplify,API, graphqlOperation } from 'aws-amplify';
 
 function LoginPage(props) {
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  const [users,setUsers]=useState([]);
+
+  const login = async ()=>{
+    try{
+      const userData=await API.graphql(graphqlOperation(listUsers));
+      const userList=userData.data.listUsers.items;
+      console.log('user list',userList);
+      setUsers(userList)
+      console.log("login");
+      console.log(user.email+user.password);
+      for(var i=0;i<3;i++)
+      {
+        if (userList[i]['email']==user.email)
+        {
+          if (userList[i]['password']==user.password)
+          {
+            navigate("/dashboard");
+          }else{
+            console.log('wrong password !!');
+          }
+        }
+      }
+    
+    }catch(error)
+    {
+      console.log('error in fetching users ',error);
+    }
+  }
+  const [user, setUser]=useState({
+    "email":"",
+    "password":""
+  })
+
+
+  function OnChange2(e){
+    e.preventDefault();
+    const {value,id}=e.target;
+    //here id is the name of the input field
+    //value is the value of that input field
+    const newdata = user;
+    newdata[id]=value;
+    setUser(newdata); 
+    
+  }
     return (
       <div className="outerDiv">
         <div className="innerDiv">
-          <form>
+          <form on>
             <label className="Label">Welcome To Farmers</label>
-            <TextField
-              variant="outlined"
-              label="Email Address"
-              type="text"
-              className={TextFieldStyles('#03C04A')().root}
-            />
-            <TextField
-              variant="outlined"
-              label="Password"
-              type="password"
-              className={TextFieldStyles('#03C04A')().root}
-            />
+            <TextArea id="email" OnChange={OnChange2} label="Email Address" type="text" />
+            <TextArea id="password" OnChange={OnChange2} label="Password" type="password" />
             <Link to="/Forgot_pass">
             <Button>
               Forgot Password?
             </Button>
             </Link>
             <div className="b1">
-              <Link to="/dashboard">
-                <Buttons text="Login" name="login" />
-              </Link>
+                <Buttons  text="Login" name="login" onTap={login()} />
               <Link to="/Register">
                 <Buttons text="Register" name="register" />
               </Link>
