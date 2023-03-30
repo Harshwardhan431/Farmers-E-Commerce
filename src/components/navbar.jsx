@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar(){
+function NavBar(props){
     return(
         <div>
             <nav>
@@ -8,16 +8,16 @@ function NavBar(){
                 <div id="navbar">
                 <ul>
                     <li>
-                        <a>Home</a>
+                        <a>{props.first}</a>
                     </li>
                     <li>
-                        <a>Orders</a>
+                        <a>{props.second}</a>
                     </li>
                     <li>
-                        <a>Stock</a>
+                        <a>{props.third}</a>
                     </li>
                     <li>
-                        <a>Login</a>
+                        <a>{props.fourth}</a>
                     </li>
                 </ul>
                 </div>
