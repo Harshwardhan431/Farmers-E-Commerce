@@ -26,4 +26,3 @@ const TextFieldStyles=(color1)=>{
         },
       }));}
 export default TextFieldStyles;
-

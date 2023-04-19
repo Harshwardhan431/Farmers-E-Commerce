@@ -1,0 +1,41 @@
+.row_box {
+    border: rgb(219, 216, 216) 1px solid;
+    width: 250px;
+    height: 170px;
+    display: flex;
+    flex-direction: row; /* set the flex direction to row */
+    align-items: center;
+    justify-content:start;
+  }
+  
+  .ItemName {
+    display: flex;
+    flex-direction: column; /* set the flex direction to column */
+    align-items: center;
+    justify-content: center;
+  }
+  .ItemName h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px; /* add some margin at the top to separate the image and text */
+  }
+  .ItemImage img {
+    width: 95%;
+    height: auto;
+    display: flex;
+    padding-top: 30px
+    
+    ;
+    margin-right: 10px; /* add some margin to the right to separate the image and text */
+  }
+  .ItemImage{
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .row_box:hover{
+    border-left: 4px green solid;
+
+  }
