@@ -30,8 +30,7 @@ function LoginPage(props) {
             console.log('wrong password !!');
           }
         }
-      }
-    
+      } 
     }catch(error)
     {
       console.log('error in fetching users ',error);
