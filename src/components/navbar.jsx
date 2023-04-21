@@ -8,7 +8,7 @@ function NavBar(props){
                 <div id="navbar">
                 <ul>
                     <li>
-                        <a>{props.first}</a>
+                        <a >{props.first}</a>
                     </li>
                     <li>
                         <a>{props.second}</a>

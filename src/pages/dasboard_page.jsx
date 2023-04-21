@@ -6,8 +6,6 @@ function Dashboard(){
     const [user,setUser]=useState(false);
     return (<>
     {user?<Farmer_Dashboard/>:<Customer_Dashboard/>}
-    
-    <Link to="/profile">Complete Profile</Link>
     </>);
 }
-export default Dashboard
+export default Dashboard;
