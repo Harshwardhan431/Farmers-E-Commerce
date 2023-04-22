@@ -14,6 +14,7 @@ function Customer_Dashboard(){
     function select_item(e){
         const i= e.target.id;        
         item=i;
+        console.log(item);
         navigate("/Product");   
 }
 

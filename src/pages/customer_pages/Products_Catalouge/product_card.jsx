@@ -1,7 +1,8 @@
 import { useState } from "react";
-import {item} from "../dashboard";
+
 import Counter from "./counter";
 import "../customer.css";
+
 
 
 export default function Product_Page(props) {

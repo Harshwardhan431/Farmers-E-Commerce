@@ -2,9 +2,14 @@ import React from "react";
 import Items from "../products/items"; //Dummy JSON
 import Product_Page from "./product_card";
 import "../customer.css";
+import {item} from "../dashboard";
 import NavBar from "../../../components/navbar";
+
+const selected_item=item// the customer has choosen this item
+
 export default function Products_Display(){
   //return your JSON in variable called as items  
+  
   
   function createCard(items) { //change this variable
         return (
