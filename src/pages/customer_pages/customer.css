@@ -24,13 +24,19 @@ body{
 
 .Products{
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 21vw;
     border: 3px solid green;
     border-radius: 25px;
+
 }
+
+.Products:active{
+    background-color: rgb(49, 214, 107);
+}
+
 .farmer_details{
     display: flex;
     flex-direction: row;
@@ -62,7 +68,10 @@ body{
 .dictionary{
     display: flex;
     flex-direction: column;
-
+  
+    width: 25vw;
+    height: 75vh;
+    overflow-y: auto;
 }
 
 
@@ -92,5 +101,57 @@ body{
     background-color: darkcyan;
     color: white;
     border: none;
+    border-radius: 5px;
+  }
+
+  .Item_catalouge{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #product_name p{
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+  }
+  #product_image{
+    margin-top: 2vh;
+    border: 3px solid rgb(228, 216, 216);
+    width: 25vw;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #product_counter{
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  #item_counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #delete{
+    margin-top: 2vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  #delete button{
+    margin-left: 3vh;
+    width:14vw;
+    background-color: brown;
+    color: aliceblue;
+    border:none;
+    height: 4.5vh;
     border-radius: 5px;
   }

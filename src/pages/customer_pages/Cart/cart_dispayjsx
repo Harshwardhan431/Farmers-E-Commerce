@@ -1,0 +1,20 @@
+import Items from "../products/items";
+import Product_Page from "../Products_Catalouge/product_card";
+export default function cart_display(){
+
+    function createCard(items) { //Dont cahnge this parameter
+        return (
+          <Product_Page
+            key={items.id} //change . accordingly
+            price={items.price}
+            Farmer_name="farmer Name"
+            stock="stock"
+          />
+        );
+      }
+      return(
+        <div>
+        <dl className="dictionary">{Items.map(createCard)}</dl> 
+        </div>
+      );
+}

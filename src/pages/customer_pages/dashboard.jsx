@@ -1,4 +1,4 @@
-import NavBar from "../../components/navbar";
+import Cust_NavBar from "./navbar";
 import Products from "./products/products";
 import Sidebar from "./sidebar/sidebar";
 import "./customer.css";
@@ -9,7 +9,8 @@ import {Link, useNavigate} from "react-router-dom";
 export let item="";
 
 function Customer_Dashboard(){
-    
+     const [item1,setItem]=useState("");
+
     const navigate = useNavigate();
     function select_item(e){
         const i= e.target.id;        
@@ -19,7 +20,7 @@ function Customer_Dashboard(){
 }
 
     return (<>
-    <NavBar first="Home" second="Cart" third="Orders" fourth="Login" />
+    <Cust_NavBar />
     <div className="Container">
     <div className="product_header">
     <div className="Buy">
