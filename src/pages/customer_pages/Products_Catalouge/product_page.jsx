@@ -31,6 +31,7 @@ export default function Products_Display(){
 
   function add_to_cart(){
     // upload item to json
+    const item_quantity=counter;
   }
   function remove(){
     SetCounter(0);
